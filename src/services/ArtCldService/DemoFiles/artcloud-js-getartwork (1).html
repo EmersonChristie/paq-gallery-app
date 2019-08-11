@@ -1,0 +1,48 @@
+<div id="artcloud-container">
+<div id="artcloud-content"></div>
+</div>
+
+<script>
+  
+       (function () {
+           var w = window;
+           var d = document;
+           
+           function l() {
+               var s = d.createElement('script');
+               s.type = 'text/javascript';
+               s.async = true;
+               s.src = 'https://artcld.com/plugin/artcloud.js';
+
+               var r = false;
+               s.onload = s.onreadystatechange = function () {
+                   if (!r && (!this.readyState || this.readyState == 'complete')) {
+                       r = true;
+                       var content = document.getElementById('artcloud-content');
+                       var callback = function () {
+                           Artcloud.art.get();
+                       };
+                       Artcloud.init({
+                           key: 'd2557d4e2004dab670e4161770fbd3c35d8977fd',
+                           type: 'art',
+                         
+                           content: 'artcloud-content',
+                           params: {
+                               
+                           }
+                       }, callback);
+                   }
+               };
+
+               var x = d.getElementsByTagName('script')[0];
+               x.parentNode.insertBefore(s, x);
+           }
+
+           if (w.attachEvent) {
+               w.attachEvent('onload', l);
+           }
+           else {
+               w.addEventListener('load', l, false);
+           }
+       })();
+   </script>
