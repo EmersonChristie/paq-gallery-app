@@ -2,8 +2,7 @@
 import axios from "axios";
 
 const BASE_URL = "https://artcloudgalleryapi.azurewebsites.net/";
-const API_KEY = process.env.ART_CLD_API_KEY
-
+const API_KEY = `${process.env.REACT_APP_ARTCLD_API_KEY}`;
 // TODO hide API key and set header
 axios.defaults.headers.common["Authorization"] = API_KEY;
 

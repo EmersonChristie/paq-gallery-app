@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ArtCldService from "../../services/ArtCldService/ArtCldService";
+import Gallery from "../../components/Gallery/Gallery.jsx";
 
 class Home extends Component {
   constructor(props) {
@@ -7,35 +7,14 @@ class Home extends Component {
     this.state = {
       artwork: []
     };
-    this.artCldService = new ArtCldService();
   }
 
   componentDidMount() {
     console.log("Home Page Mounted");
-    this.artCldService.getAllArt().then(res => {
-      this.setState({ artwork: res.Artwork });
-      console.log(this.state);
-    });
   }
 
-  renderPaintings = () => {
-    return this.state.artwork.map((art, key) => {
-      return (
-        <li key={key}>
-          <p>{art.Title}</p>
-          <img src={art.Images[0].MediumUrl} alt={art.Title} />
-        </li>
-      );
-    });
-  };
-
   render() {
-    return (
-      <div>
-        <h2>Here's a list of paintings...</h2>
-        <ul>{this.renderPaintings()}</ul>
-      </div>
-    );
+    return <Gallery />;
   }
 }
 
