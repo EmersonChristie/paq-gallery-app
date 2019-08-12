@@ -23,7 +23,7 @@ class Home extends Component {
       return (
         <li key={key}>
           <p>{art.Title}</p>
-          <p>{key}</p>
+          <img src={art.Images[0].MediumUrl} alt={art.Title} />
         </li>
       );
     });
