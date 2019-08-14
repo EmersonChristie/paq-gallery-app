@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import ReactResizeDetector from "react-resize-detector";
-import StackGrid from "react-stack-grid";
+import StackGrid, { transitions, easings } from "react-stack-grid";
 import ArtCldService from "../../services/ArtCldService/ArtCldService";
+
+const transition = transitions.scaleDown;
 
 class Gallery extends Component {
   constructor(props) {
@@ -26,28 +28,17 @@ class Gallery extends Component {
     });
   };
 
-  // renderPaintings = () => {
-  //   return this.state.artwork.map((art, key) => {
-  //     return (
-  //       <div key={key} onClick={this.removeItem(art.ArtId)}>
-  //         {/* <img src={art.Images[0].MediumUrl} alt={art.Title} /> */}
-  //         <img src={art.Images[0].MediumUrl} alt={art.Title} />
-  //         {/* <p>{art.Title}</p> */}
-  //       </div>
-  //     );
-  //   });
-  // };
-
   renderPaintings = () => {
     return this.state.artwork.map(art => (
-      //   <div key={art.ArtId} onClick={() => this.removeItem(art.ArtId)}>
-      <img
-        style={{ maxWidth: 300 }}
-        src={art.Images[0].SmallUrl}
-        alt={art.Title}
-        onClick={() => this.removeItem(art.ArtId)}
-      />
-      //   </div>
+      <figure key={art.Images[0].MediumUrl} className="image">
+        <img
+          style={{ maxWidth: 300 }}
+          src={art.Images[0].MediumUrl}
+          alt={art.Title}
+          onClick={() => this.removeItem(art.ArtId)}
+        />
+        {/* <figcaption>{art.Title}</figcaption> */}
+      </figure>
     ));
   };
 
@@ -58,27 +49,18 @@ class Gallery extends Component {
         columnWidth={300}
         duration={600}
         gutterWidth={15}
-        gutterHeight={15}
+        // TODO: fix gutter height (must be negative)
+        gutterHeight={-15}
         gridRef={grid => (this.grid = grid)}
-        // easing={easings.cubicOut}
-        // appearDelay={60}
-        // appear={transition.appear}
-        // appeared={transition.appeared}
-        // enter={transition.enter}
-        // entered={transition.entered}
-        // leaved={transition.leaved}
+        easing={easings.cubicOut}
+        appearDelay={60}
+        appear={transition.appear}
+        appeared={transition.appeared}
+        enter={transition.enter}
+        entered={transition.entered}
+        leaved={transition.leaved}
       >
-        {/* <ReactResizeDetector
-          handleWidth
-          handleHeight
-          onResize={() => {
-            if (this.grid) {
-              this.grid.updateLayout();
-            }
-          }}
-        > */}
-        <div>{this.renderPaintings()}</div>
-        {/* </ReactResizeDetector> */}
+        {this.renderPaintings()}
       </StackGrid>
     );
   }
