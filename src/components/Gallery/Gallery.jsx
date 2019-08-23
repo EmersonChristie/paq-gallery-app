@@ -3,6 +3,9 @@ import ReactResizeDetector from "react-resize-detector";
 import StackGrid, { transitions, easings } from "react-stack-grid";
 import ArtCldService from "../../services/ArtCldService/ArtCldService";
 
+import getSchemaFromData from "graphql-schema-from-json";
+import { printSchema } from "graphql";
+
 const transition = transitions.scaleDown;
 
 class Gallery extends Component {
@@ -18,7 +21,6 @@ class Gallery extends Component {
     console.log("Gallery Mounted");
     this.artCldService.getAllArt().then(res => {
       this.setState({ artwork: res.Artwork });
-      console.log(this.state);
     });
   }
 
