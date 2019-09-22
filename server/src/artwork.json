@@ -1,0 +1,385 @@
+{
+  "Artwork": [
+    {
+      "ArtId": 1395474,
+      "Artist": {
+        "ArtistId": 86654,
+        "About": null,
+        "Birthdate": null,
+        "Name": "Patricia Qualls Contemporary Art",
+        "Notes": null,
+        "Image": null,
+        "Profile": null,
+        "Tags": []
+      },
+      "Date": "2018",
+      "Dimensions": {
+        "Formatted": "48 x 48 in",
+        "Height": 48.0,
+        "Width": 48.0,
+        "Depth": 0.0,
+        "Metric": 0
+      },
+      "EditionCount": "1",
+      "Editions": [
+        {
+          "EditionId": 1790444,
+          "ArtId": 1395474,
+          "Active": true,
+          "Edition": null,
+          "Location": "Studio",
+          "Notes": "Wonder wall",
+          "Number": null,
+          "Price": "$9,500.00",
+          "_FormattedPrice": "$9,500.00",
+          "_Price": 9500.0,
+          "SKU": null,
+          "Dimensions": {
+            "Formatted": "48 x 48 in",
+            "Height": 48.0,
+            "Width": 48.0,
+            "Depth": 0.0,
+            "Metric": 0
+          }
+        }
+      ],
+      "Genre": 0,
+      "Images": [
+        {
+          "ImageId": 726468,
+          "S3Id": "zsowfzvbv92bygj3a3dt",
+          "CloudinaryId": null,
+          "Urls": null,
+          "Url": "https://cdn.artcld.com/img/zsowfzvbv92bygj3a3dt.jpg",
+          "SmallUrl": "https://cdn.artcld.com/img/w_100,h_100,c_fit/zsowfzvbv92bygj3a3dt.jpg",
+          "MediumUrl": "https://cdn.artcld.com/img/w_455,h_600,c_fit/zsowfzvbv92bygj3a3dt.jpg",
+          "LargeUrl": "https://cdn.artcld.com/img/w_800,h_600,c_fit/zsowfzvbv92bygj3a3dt.jpg",
+          "GiantUrl": "https://cdn.artcld.com/img/w_2000,h_2000,c_fit/zsowfzvbv92bygj3a3dt.jpg",
+          "PrimaryR": 150,
+          "PrimaryG": 166,
+          "PrimaryB": 175,
+          "SecondaryR": 170,
+          "SecondaryG": 195,
+          "SecondaryB": 209,
+          "TertiaryR": 177,
+          "TertiaryG": 195,
+          "TertiaryB": 205,
+          "Width": 1443,
+          "Height": 1500,
+          "Cover": true
+        }
+      ],
+      "Medium": "Acrylic on Canvas",
+      "Metric": 0,
+      "Profile": {
+        "AcceptsPayments": false,
+        "Address": {
+          "AddressId": 2248359,
+          "AddressLineOne": "15 W Carmel Valley Rd.",
+          "AddressLineTwo": null,
+          "City": "Carmel Valley",
+          "Country": null,
+          "Latitude": 36.479666,
+          "Longitude": -121.731101,
+          "State": "CA",
+          "Zip": "93924"
+        },
+        "Company": "Patricia Qualls Contemporary Art",
+        "DisplayName": "Patricia Qualls Contemporary Art",
+        "Featured": null,
+        "Img": {
+          "ImageId": 913730,
+          "S3Id": "mc5qnab4mgmxytsixykf",
+          "CloudinaryId": null,
+          "Urls": null,
+          "Url": "https://cdn.artcld.com/img/mc5qnab4mgmxytsixykf.jpg",
+          "SmallUrl": "https://cdn.artcld.com/img/w_100,h_100,c_fit/mc5qnab4mgmxytsixykf.jpg",
+          "MediumUrl": "https://cdn.artcld.com/img/w_455,h_600,c_fit/mc5qnab4mgmxytsixykf.jpg",
+          "LargeUrl": "https://cdn.artcld.com/img/w_800,h_600,c_fit/mc5qnab4mgmxytsixykf.jpg",
+          "GiantUrl": "https://cdn.artcld.com/img/w_2000,h_2000,c_fit/mc5qnab4mgmxytsixykf.jpg",
+          "PrimaryR": 68,
+          "PrimaryG": 90,
+          "PrimaryB": 53,
+          "SecondaryR": 39,
+          "SecondaryG": 58,
+          "SecondaryB": 26,
+          "TertiaryR": 52,
+          "TertiaryG": 77,
+          "TertiaryB": 98,
+          "Width": 500,
+          "Height": 500,
+          "Cover": false
+        },
+        "Localization": {
+          "CurrencySymbol": "$",
+          "CurrencySymbolPlacement": 1,
+          "DecimalPoint": ".",
+          "DefaultTaxPercent": 0.0,
+          "Metric": 0,
+          "ThousandsSeperator": ","
+        },
+        "Phone": "8312457117",
+        "ProfileId": 39184,
+        "Type": 2
+      },
+      "Title": "Another Mystical Day",
+      "Tags": "Mystical Series",
+      "Type": 0,
+      "EditionType": 0
+    },
+    {
+      "ArtId": 1465466,
+      "Artist": {
+        "ArtistId": 86654,
+        "About": null,
+        "Birthdate": null,
+        "Name": "Patricia Qualls Contemporary Art",
+        "Notes": null,
+        "Image": null,
+        "Profile": null,
+        "Tags": []
+      },
+      "Date": "2017",
+      "Dimensions": {
+        "Formatted": "78 x 60 in",
+        "Height": 78.0,
+        "Width": 60.0,
+        "Depth": 0.0,
+        "Metric": 0
+      },
+      "EditionCount": "1",
+      "Editions": [
+        {
+          "EditionId": 1864871,
+          "ArtId": 1465466,
+          "Active": true,
+          "Edition": null,
+          "Location": "Studio",
+          "Notes": null,
+          "Number": 4,
+          "Price": "$16,500.00",
+          "_FormattedPrice": "$16,500.00",
+          "_Price": 16500.0,
+          "SKU": null,
+          "Dimensions": {
+            "Formatted": "78 x 60 in",
+            "Height": 78.0,
+            "Width": 60.0,
+            "Depth": 0.0,
+            "Metric": 0
+          }
+        }
+      ],
+      "Genre": 0,
+      "Images": [
+        {
+          "ImageId": 726471,
+          "S3Id": "7w9ite1w2busazodab38",
+          "CloudinaryId": null,
+          "Urls": null,
+          "Url": "https://cdn.artcld.com/img/7w9ite1w2busazodab38.jpg",
+          "SmallUrl": "https://cdn.artcld.com/img/w_100,h_100,c_fit/7w9ite1w2busazodab38.jpg",
+          "MediumUrl": "https://cdn.artcld.com/img/w_455,h_600,c_fit/7w9ite1w2busazodab38.jpg",
+          "LargeUrl": "https://cdn.artcld.com/img/w_800,h_600,c_fit/7w9ite1w2busazodab38.jpg",
+          "GiantUrl": "https://cdn.artcld.com/img/w_2000,h_2000,c_fit/7w9ite1w2busazodab38.jpg",
+          "PrimaryR": 217,
+          "PrimaryG": 223,
+          "PrimaryB": 228,
+          "SecondaryR": 202,
+          "SecondaryG": 210,
+          "SecondaryB": 217,
+          "TertiaryR": 220,
+          "TertiaryG": 200,
+          "TertiaryB": 135,
+          "Width": 1138,
+          "Height": 1500,
+          "Cover": true
+        }
+      ],
+      "Medium": "Acrylic on Canvas",
+      "Metric": 0,
+      "Profile": {
+        "AcceptsPayments": false,
+        "Address": {
+          "AddressId": 2248359,
+          "AddressLineOne": "15 W Carmel Valley Rd.",
+          "AddressLineTwo": null,
+          "City": "Carmel Valley",
+          "Country": null,
+          "Latitude": 36.479666,
+          "Longitude": -121.731101,
+          "State": "CA",
+          "Zip": "93924"
+        },
+        "Company": "Patricia Qualls Contemporary Art",
+        "DisplayName": "Patricia Qualls Contemporary Art",
+        "Featured": null,
+        "Img": {
+          "ImageId": 913730,
+          "S3Id": "mc5qnab4mgmxytsixykf",
+          "CloudinaryId": null,
+          "Urls": null,
+          "Url": "https://cdn.artcld.com/img/mc5qnab4mgmxytsixykf.jpg",
+          "SmallUrl": "https://cdn.artcld.com/img/w_100,h_100,c_fit/mc5qnab4mgmxytsixykf.jpg",
+          "MediumUrl": "https://cdn.artcld.com/img/w_455,h_600,c_fit/mc5qnab4mgmxytsixykf.jpg",
+          "LargeUrl": "https://cdn.artcld.com/img/w_800,h_600,c_fit/mc5qnab4mgmxytsixykf.jpg",
+          "GiantUrl": "https://cdn.artcld.com/img/w_2000,h_2000,c_fit/mc5qnab4mgmxytsixykf.jpg",
+          "PrimaryR": 68,
+          "PrimaryG": 90,
+          "PrimaryB": 53,
+          "SecondaryR": 39,
+          "SecondaryG": 58,
+          "SecondaryB": 26,
+          "TertiaryR": 52,
+          "TertiaryG": 77,
+          "TertiaryB": 98,
+          "Width": 500,
+          "Height": 500,
+          "Cover": false
+        },
+        "Localization": {
+          "CurrencySymbol": "$",
+          "CurrencySymbolPlacement": 1,
+          "DecimalPoint": ".",
+          "DefaultTaxPercent": 0.0,
+          "Metric": 0,
+          "ThousandsSeperator": ","
+        },
+        "Phone": "8312457117",
+        "ProfileId": 39184,
+        "Type": 2
+      },
+      "Title": "Awashed with Grace",
+      "Tags": null,
+      "Type": 0,
+      "EditionType": 0
+    },
+    {
+      "ArtId": 1465467,
+      "Artist": {
+        "ArtistId": 86654,
+        "About": null,
+        "Birthdate": null,
+        "Name": "Patricia Qualls Contemporary Art",
+        "Notes": null,
+        "Image": null,
+        "Profile": null,
+        "Tags": []
+      },
+      "Date": "2018",
+      "Dimensions": {
+        "Formatted": "78 x 60 in",
+        "Height": 78.0,
+        "Width": 60.0,
+        "Depth": 0.0,
+        "Metric": 0
+      },
+      "EditionCount": "1",
+      "Editions": [
+        {
+          "EditionId": 1864872,
+          "ArtId": 1465467,
+          "Active": true,
+          "Edition": null,
+          "Location": "Studio",
+          "Notes": null,
+          "Number": 5,
+          "Price": "$16,500.00",
+          "_FormattedPrice": "$16,500.00",
+          "_Price": 16500.0,
+          "SKU": null,
+          "Dimensions": {
+            "Formatted": "78 x 60 in",
+            "Height": 78.0,
+            "Width": 60.0,
+            "Depth": 0.0,
+            "Metric": 0
+          }
+        }
+      ],
+      "Genre": 0,
+      "Images": [
+        {
+          "ImageId": 726473,
+          "S3Id": "o3lmnfa34fcxqstib4te",
+          "CloudinaryId": null,
+          "Urls": null,
+          "Url": "https://cdn.artcld.com/img/o3lmnfa34fcxqstib4te.jpg",
+          "SmallUrl": "https://cdn.artcld.com/img/w_100,h_100,c_fit/o3lmnfa34fcxqstib4te.jpg",
+          "MediumUrl": "https://cdn.artcld.com/img/w_455,h_600,c_fit/o3lmnfa34fcxqstib4te.jpg",
+          "LargeUrl": "https://cdn.artcld.com/img/w_800,h_600,c_fit/o3lmnfa34fcxqstib4te.jpg",
+          "GiantUrl": "https://cdn.artcld.com/img/w_2000,h_2000,c_fit/o3lmnfa34fcxqstib4te.jpg",
+          "PrimaryR": 231,
+          "PrimaryG": 186,
+          "PrimaryB": 194,
+          "SecondaryR": 236,
+          "SecondaryG": 182,
+          "SecondaryB": 173,
+          "TertiaryR": 213,
+          "TertiaryG": 139,
+          "TertiaryB": 157,
+          "Width": 1150,
+          "Height": 1500,
+          "Cover": true
+        }
+      ],
+      "Medium": "Acrylic on Canvas",
+      "Metric": 0,
+      "Profile": {
+        "AcceptsPayments": false,
+        "Address": {
+          "AddressId": 2248359,
+          "AddressLineOne": "15 W Carmel Valley Rd.",
+          "AddressLineTwo": null,
+          "City": "Carmel Valley",
+          "Country": null,
+          "Latitude": 36.479666,
+          "Longitude": -121.731101,
+          "State": "CA",
+          "Zip": "93924"
+        },
+        "Company": "Patricia Qualls Contemporary Art",
+        "DisplayName": "Patricia Qualls Contemporary Art",
+        "Featured": null,
+        "Img": {
+          "ImageId": 913730,
+          "S3Id": "mc5qnab4mgmxytsixykf",
+          "CloudinaryId": null,
+          "Urls": null,
+          "Url": "https://cdn.artcld.com/img/mc5qnab4mgmxytsixykf.jpg",
+          "SmallUrl": "https://cdn.artcld.com/img/w_100,h_100,c_fit/mc5qnab4mgmxytsixykf.jpg",
+          "MediumUrl": "https://cdn.artcld.com/img/w_455,h_600,c_fit/mc5qnab4mgmxytsixykf.jpg",
+          "LargeUrl": "https://cdn.artcld.com/img/w_800,h_600,c_fit/mc5qnab4mgmxytsixykf.jpg",
+          "GiantUrl": "https://cdn.artcld.com/img/w_2000,h_2000,c_fit/mc5qnab4mgmxytsixykf.jpg",
+          "PrimaryR": 68,
+          "PrimaryG": 90,
+          "PrimaryB": 53,
+          "SecondaryR": 39,
+          "SecondaryG": 58,
+          "SecondaryB": 26,
+          "TertiaryR": 52,
+          "TertiaryG": 77,
+          "TertiaryB": 98,
+          "Width": 500,
+          "Height": 500,
+          "Cover": false
+        },
+        "Localization": {
+          "CurrencySymbol": "$",
+          "CurrencySymbolPlacement": 1,
+          "DecimalPoint": ".",
+          "DefaultTaxPercent": 0.0,
+          "Metric": 0,
+          "ThousandsSeperator": ","
+        },
+        "Phone": "8312457117",
+        "ProfileId": 39184,
+        "Type": 2
+      },
+      "Title": "Blessings to the Children",
+      "Tags": null,
+      "Type": 0,
+      "EditionType": 0
+    }
+  ]
+}

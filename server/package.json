@@ -1,0 +1,23 @@
+{
+  "name": "graphql-mongodb-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./src/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-datasource": "^0.6.3",
+    "apollo-datasource-rest": "^0.6.1",
+    "apollo-server": "^2.9.0",
+    "dotenv": "^8.1.0",
+    "graphql": "^14.4.2",
+    "mongoose": "^5.7.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
