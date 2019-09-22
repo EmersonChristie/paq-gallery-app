@@ -3,6 +3,8 @@ import ReactResizeDetector from "react-resize-detector";
 import StackGrid, { transitions, easings } from "react-stack-grid";
 import ArtCldService from "../../services/ArtCldService/ArtCldService";
 
+import locStore from "local-storage";
+
 import getSchemaFromData from "graphql-schema-from-json";
 import { printSchema } from "graphql";
 
@@ -32,15 +34,14 @@ class Gallery extends Component {
 
   renderPaintings = () => {
     return this.state.artwork.map(art => (
-      <figure key={art.Images[0].MediumUrl} className="image">
+      <div style={{ width: 300 }}>
         <img
-          style={{ maxWidth: 300 }}
+          style={{ width: 300 }}
           src={art.Images[0].MediumUrl}
           alt={art.Title}
           onClick={() => this.removeItem(art.ArtId)}
         />
-        {/* <figcaption>{art.Title}</figcaption> */}
-      </figure>
+      </div>
     ));
   };
 
@@ -52,7 +53,7 @@ class Gallery extends Component {
         duration={600}
         gutterWidth={15}
         // TODO: fix gutter height (must be negative)
-        gutterHeight={-15}
+        gutterHeight={15}
         gridRef={grid => (this.grid = grid)}
         easing={easings.cubicOut}
         appearDelay={60}
@@ -69,32 +70,3 @@ class Gallery extends Component {
 }
 
 export default Gallery;
-
-// {
-//     "columnWidth": 75,
-//     "monitorImagesLoaded": true,
-//     "style": {},
-//     "gridRef": null,
-//     "component": "div",
-//     "itemComponent": "img",
-//     "gutterWidth": 5,
-//     "gutterHeight": 5,
-//     "duration": 480,
-//     "easing": "cubic-bezier(0.165, 0.84, 0.44, 1)",
-//     "appearDelay": 30,
-//     "appear": "[function appear]",
-//     "appeared": "[function appeared]",
-//     "enter": "[function appeared]",
-//     "entered": "[function appeared]",
-//     "leaved": "[function appear]",
-//     "units": {
-//       "length": "px",
-//       "angle": "deg"
-//     },
-//     "vendorPrefix": true,
-//     "userAgent": null,
-//     "enableSSR": false,
-//     "onLayout": null,
-//     "horizontal": false,
-//     "rtl": false
-//   }
