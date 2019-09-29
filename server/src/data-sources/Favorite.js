@@ -38,7 +38,7 @@ class Favorites extends DataSource {
       .save()
       .then(result => {
         console.log(result);
-        return { ...result._doc };
+        return { ...result._doc, _id: result._doc._id.toString() };
       })
       .catch(err => {
         console.log(err);
