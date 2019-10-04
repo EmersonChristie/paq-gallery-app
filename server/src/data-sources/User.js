@@ -33,6 +33,32 @@ class Users extends DataSource {
       });
   }
 
+  addUserFav(args) {
+    return User.findByIdAndUpdate(
+      args.userFavInput.userId,
+      {
+        $push: {
+          userFavs: {
+            artId: args.userFavInput.artId,
+            dateFavorited: new Date().toDateString()
+          }
+        }
+      },
+      {
+        new: true
+      }
+    )
+      .then(result => {
+        if (result === null) throw new Error("User ID Does Not Exist");
+        console.log(result);
+        return result;
+      })
+      .catch(err => {
+        console.error(err);
+        throw err;
+      });
+  }
+
   // TODO:
   // addFavorite() -> adds a favorite to the users list of favorites
   //     if artId not in list of favorites create new favorite and append user

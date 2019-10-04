@@ -5,7 +5,9 @@ const Schema = mongoose.Schema;
 const userSchema = new Schema({
   email: {
     type: String,
-    required: true
+    required: true,
+    unique: true,
+    lowercase: true
   },
   password: {
     type: String,
@@ -22,9 +24,11 @@ const userSchema = new Schema({
   // IDs of Art Favorites created by user
   userFavs: [
     {
-      favId: {
-        type: Schema.Types.ObjectId,
-        ref: "Favorite"
+      artId: {
+        type: String,
+        required: true,
+        unique: true,
+        dropDups: true
       },
       dateFavorited: {
         type: Date,

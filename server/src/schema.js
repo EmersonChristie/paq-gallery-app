@@ -7,6 +7,7 @@ module.exports = `
   type Mutation {
     createFavorite(favoriteInput: FavoriteInput): Favorite
     createUser(userInput: UserInput): User
+    addUserFav(userFavInput: UserFavInput): User
   }
 
   type User {
@@ -15,6 +16,7 @@ module.exports = `
     password: String
     firstName: String
     lastName: String
+    userFavs: [UserFav!]
   }
 
   input UserInput {
@@ -22,6 +24,17 @@ module.exports = `
     password: String!
     firstName: String
     lastName: String
+  }
+
+  type UserFav {
+    _id: ID!
+    artId: String!
+    dateFavorited: String
+  }
+
+  input UserFavInput {
+    artId: String!
+    userId: String!
   }
 
   type Favorite {
