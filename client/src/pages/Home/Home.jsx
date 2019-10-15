@@ -1,5 +1,9 @@
 import React, { Component } from "react";
+// import Gallery from "../../components/Gallery/Gallery.jsx";
+
 import Gallery from "../../components/Gallery/Gallery.jsx";
+
+
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -10,10 +14,12 @@ class Home extends Component {
 
   componentDidMount() {
     console.log("Home Page Mounted");
+    
   }
 
   render() {
-    return <Gallery />;
+     return (<Gallery />);
+    
   }
 }
 

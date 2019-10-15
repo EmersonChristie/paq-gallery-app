@@ -48,3 +48,5 @@ class Favorites extends DataSource {
 }
 
 module.exports = Favorites;
+
+

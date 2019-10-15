@@ -47,6 +47,7 @@ module.exports = `
     medium: String
   }
 
+
   input FavoriteInput {
     artId: String!
     title: String
