@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-// import Gallery from "../../components/Gallery/Gallery.jsx";
-
-import Gallery from "../../components/Gallery/Gallery.jsx";
+import styles from './home.module.css'
+import Gallery from "../../components/containers/Gallery/Gallery";
 
 
 class Home extends Component {
@@ -18,7 +17,11 @@ class Home extends Component {
   }
 
   render() {
-     return (<Gallery />);
+     return (
+        <div className={styles.container}>
+          <Gallery />
+        </div>
+     );
     
   }
 }
