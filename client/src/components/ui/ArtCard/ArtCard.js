@@ -5,10 +5,6 @@ import styles from "./ArtCard.module.css";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 
-AOS.init({
-    delay: 200,
-    duration: 1500
-});
 
 const ArtImage = ({ url, title }) => {
   return <img className={styles.artImage} src={url} alt={title} />;
@@ -18,7 +14,7 @@ const CardInfo = ({ artist, title, date, dimensions }) => {
   return (
     <div className={styles.cardInfo}>
       <p className={styles.artist}>{artist}</p>
-      <p className={styles.title}>{title}</p>
+      <p className={styles.title}>{title}, {date}</p>
       <p className={styles.dimensions}>{dimensions}</p>
     </div>
   );
