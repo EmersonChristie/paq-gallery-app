@@ -6,5 +6,7 @@ module.exports = {
   artCldKey: process.env.ARTCLD_API_KEY,
   mongoUser: process.env.MONGO_USER,
   mongoPwd: process.env.MONGO_PWD,
-  mongoDB: process.env.MONGO_DB
+  mongoDB: process.env.MONGO_DB,
+  artLogicUser: process.env.ARTLOGIC_USERNAME,
+  artLogicPwd: process.env.ARTLOGIC_PWD,
 };
