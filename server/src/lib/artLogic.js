@@ -1,5 +1,6 @@
 const puppeteer = require("puppeteer");
 const { artLogicUser, artLogicPwd } = require("../../config.js");
+const fs = require("fs");
 
 const exportPath = "./src/lib/exports/export.csv";
 
@@ -103,35 +104,35 @@ const csvToJson = async (filePath) => {
 };
 
 // Source: https://stackoverflow.com/a/26215431
-const toCamel = (o) => {
-  var newO, origKey, newKey, value;
-  if (o instanceof Array) {
-    return o.map(function (value) {
-      if (typeof value === "object") {
-        value = toCamel(value);
-      }
-      return value;
-    });
-  } else {
-    newO = {};
-    for (origKey in o) {
-      if (o.hasOwnProperty(origKey)) {
-        newKey = (
-          origKey.charAt(0).toLowerCase() + origKey.slice(1) || origKey
-        ).toString();
-        value = o[origKey];
-        if (
-          value instanceof Array ||
-          (value !== null && value.constructor === Object)
-        ) {
-          value = toCamel(value);
-        }
-        newO[newKey] = value;
-      }
-    }
-  }
-  return newO;
-};
+// const toCamel = (o) => {
+//   var newO, origKey, newKey, value;
+//   if (o instanceof Array) {
+//     return o.map(function (value) {
+//       if (typeof value === "object") {
+//         value = toCamel(value);
+//       }
+//       return value;
+//     });
+//   } else {
+//     newO = {};
+//     for (origKey in o) {
+//       if (o.hasOwnProperty(origKey)) {
+//         newKey = (
+//           origKey.charAt(0).toLowerCase() + origKey.slice(1) || origKey
+//         ).toString();
+//         value = o[origKey];
+//         if (
+//           value instanceof Array ||
+//           (value !== null && value.constructor === Object)
+//         ) {
+//           value = toCamel(value);
+//         }
+//         newO[newKey] = value;
+//       }
+//     }
+//   }
+//   return newO;
+// };
 
 const camelize = (str) => {
   return str
@@ -147,41 +148,49 @@ const camelize = (str) => {
  * @param csvArt - the invalid json object with spaces and /n in the keys
  */
 const cleanCsv = (csvArt) => {
+  // Function to remove non alphanumeric chars in some of the keys
   const transform = (str) => {
     let newstr = "";
     for (let i = 0; i < str.length; i++)
-      if (
-        !(
-          str[i] == "\n" ||
-          str[i] == "\r" ||
-          //   str[i] == " " ||
-          str[i] == "(" ||
-          str[i] == ")"
-        )
-      )
+      if (!(str[i] == "\n" || str[i] == "\r" || str[i] == "(" || str[i] == ")"))
         newstr += camelize(str[i]);
 
     return newstr;
   };
 
   for (let i = 0; i < csvArt.length; i++) {
-    // console.log(csvArt[i]);
     const art = csvArt[i];
     for (key in art) {
-      //   console.log("Key: " + key);
       const val = csvArt[i][key];
-      //   console.log("cleanCsv -> val", val);
+
+      // delete the old key
       delete csvArt[i][key];
+
+      // if the value is not empty assign val to new key name
       if (val != "") {
         const newKey = transform(key);
-        //   console.log("cleanCsv -> newKey", newKey);
-
         csvArt[i][newKey] = val;
       }
     }
   }
-  //   console.log(csvArt);
   return csvArt;
+};
+
+const saveToFile = async (filename, json) => {
+  let obj = {
+    ...json,
+  };
+  const strObj = JSON.stringify(json);
+  await fs.writeFile(filename, strObj, "utf8", function readFileCallback(
+    err,
+    data
+  ) {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log("File Successfully written");
+    }
+  });
 };
 /**
  * Download Excel file with data for all artworks that are marked as live on ArtLogic
@@ -205,37 +214,38 @@ const getArt = async () => {
   //   await selectExportSettings(exportPage, exportOptions);
 
   // Convert export file to JSON object
-  await csvToJson(exportPath).then((csvArt) => {
-    // console.log("getArt -> csvArt", csvArt);
-    const cleanData = cleanCsv(csvArt);
+  const csvArt = await csvToJson(exportPath);
+  const cleanData = await cleanCsv(csvArt);
 
-    const artMap = cleanData.map((art) => {
-      return {
-        id: art.id,
-        stockNumber: art.stocknumber,
-        artist: art.artist || null,
-        title: art.title || null,
-        year: art.year || null,
-        medium: art.medium || null,
-        dimensions: art.dimensions || null,
-        series: art.series || null,
-        status: art.status || null,
-        availability: art.availability || null,
-        location: art.location || null,
-        hasImage: art.recordhasimage || "0",
-        imgSmall: art.mainimageurlsmall || null,
-        imgMedium: art.mainimageurlmedium || null,
-        imgLarge: art.mainimageurllarge || null,
-        price: art.retailprice || null,
-        formatPrice: art.displaypriceextax || null,
-        searchTerms: art.searchterms || null,
-        createdOn: art.creationdate || null,
-        lastSaved: art.lastsaved || null,
-        lastSavedBy: art.lastsavedby || null,
-      };
-    });
-    console.log("getArt -> artMap", artMap);
+  const artMap = await cleanData.map((art) => {
+    return {
+      id: art.id,
+      stockNumber: art.stocknumber,
+      artist: art.artist || null,
+      title: art.title || null,
+      year: art.year || null,
+      medium: art.medium || null,
+      dimensions: art.dimensions || null,
+      series: art.series || null,
+      status: art.status || null,
+      availability: art.availability || null,
+      location: art.location || null,
+      hasImage: art.recordhasimage || "0",
+      imgSmall: art.mainimageurlsmall || null,
+      imgMedium: art.mainimageurlmedium || null,
+      imgLarge: art.mainimageurllarge || null,
+      price: art.retailprice || null,
+      formatPrice: art.displaypriceextax || null,
+      searchTerms: art.searchterms || null,
+      createdOn: art.creationdate || null,
+      lastSaved: art.lastsaved || null,
+      lastSavedBy: art.lastsavedby || null,
+    };
   });
+
+  const path = "./src/lib/exports/art.json";
+  await saveToFile(path, artMap);
+
   //   console.log("getArt -> csvArt", csvArt);
 
   // close browser
